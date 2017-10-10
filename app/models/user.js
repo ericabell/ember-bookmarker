@@ -6,6 +6,12 @@ export default DS.Model.extend({
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
   avatar: DS.attr('string'),
-  isAdmin: DS.attr('boolean'),
-  created: DS.attr('date')
+  isAdmin: DS.attr('boolean', {
+    defaultValue: false
+  }),
+  created: DS.attr('date', {
+    defaultValue() {
+      return new Date();
+    }
+  })
 });

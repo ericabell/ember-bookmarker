@@ -2,7 +2,9 @@
 <p>{{testProperty}}</p>
 {{#each model as |user index|}}
   <p>#{{index}} - {{user.fullName}}</p>
+
   {{#each user.bookmarks as |bookmark|}}
+    <p>{{bookmark.title}}</p>
   {{else}}
     <p>No Bookmarks for this user!</p>
   {{/each}}

@@ -13,6 +13,11 @@ export default Ember.Component.extend({
           this.get('router').transitionTo('bookmarks');
         }
       )
+      .catch(
+        () => {
+          Ember.Logger.info('failure to save')
+        }
+      )
   },
     cancel() { Ember.Logger.info('cancel called');}
   }

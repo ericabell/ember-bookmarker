@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    save(bookmark) { Ember.logger.info('save called');},
-    cancel() { Ember.logger.info('cancel called');}
+    save(bookmark) { Ember.Logger.info('save called');},
+    cancel() { Ember.Logger.info('cancel called');}
   }
 });

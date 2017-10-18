@@ -5,7 +5,7 @@ moduleForModel('user', 'Unit | Model | user', {
   needs: ['model:bookmark']
 });
 
-test('it exists', function(assert) {
+test('fullName returns correct join of first and last', function(assert) {
   let model = this.subject({firstName: 'foo', lastName: 'bar'});
   // let store = this.store();
   assert.equal(model.get('fullName'), 'foo bar', 'valid fullname');
